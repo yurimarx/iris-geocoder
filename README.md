@@ -43,13 +43,20 @@ $ docker-compose up -d
 - Body: raw
 - Body text: One Memorial Drive, Cambridge, MA (or any another address you want)
 
-6. **For Geocoding a Lat/Long point:** Go to your Postman (or other similar REST client) and config the request like this and click send to see the results:
+7. **For Geocoding a Lat/Long point:** Go to your Postman (or other similar REST client) and config the request like this and click send to see the results:
 
 ![Geocoding a Lat/Long point](https://github.com/yurimarx/iris-geocoder/raw/main/reverse.png "Geocoding a Lat/Long point")
 
 - Method: GET
 - URL: http://localhost:52773/iris-geocoder/reverse?Lat=42.36261323029149&Long=-71.08003151970848  
 
+
+# Configure your Google account to use google functions
+To use http://localhost:52773/iris-geocoder/forward or http://localhost:52773/iris-geocoder/reverse you must have a Google account and have a payment plan active and configured. So you can generate your Google API Key and put it inside Dockerfile line 31:
+
+ENV GOOGLE_API_KEY=YOUR-API-KEY-HERE
+
+See detailed instructions on: https://developers.google.com/maps/get-started
 
 # Credits
 This application used geocoder project
