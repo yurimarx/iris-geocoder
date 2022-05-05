@@ -28,7 +28,7 @@ COPY iris.script iris.script
 
 USER ${ISC_PACKAGE_MGRUSER}
 
-ENV GOOGLE_API_KEY=YOUR-API-KEY-HERE
+ENV GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY
 
 RUN iris start IRIS \
 	&& iris session IRIS < iris.script \

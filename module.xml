@@ -8,6 +8,9 @@
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.geocoder.PKG"/>
+      <Invokes>
+        <Invoke Class="dc.geocoder.Company" Method="CreateFiveCompanies"></Invoke>
+      </Invokes>
       <Dependencies>
         <ModuleReference>
           <Name>swagger-ui</Name>
